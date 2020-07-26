@@ -156,6 +156,6 @@ app.get('/employee', async(req,res)=>{
 
 
 
-app.listen(4040,()=>{
+app.listen(process.env.PORT||4040,()=>{
     console.log("listening");
 })
