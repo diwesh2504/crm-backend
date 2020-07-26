@@ -5,8 +5,8 @@ const bodyParser=require('body-parser');
 const cors=require('cors');
 const dotEnv=require('dotenv').config();
 const bcrypt=require('bcrypt');
-const url="mongodb://localhost:27017";
-//const url=process.env.DB;
+//const url="mongodb://localhost:27017";
+const url=process.env.DB;
 
 app.use(bodyParser.json());
 app.use(cors());
