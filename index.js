@@ -10,17 +10,7 @@ const url=process.env.DB;
 
 app.use(bodyParser.json());
 app.use(cors());
-app.get("/", async (req,res)=>{
-    try{
-        let client=await mongodb.connect(url);
-        let db=client.db("crm");
-        let data=await db.getCollectionInfos();
-        res.send(data);
 
-    }catch(err){
-        console.log(err);
-    }
-})
 
 //Entering Details Of New User
 //1.Employee
